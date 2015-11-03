@@ -6,6 +6,11 @@ DOCKER_COMPOSE_VERSION=1.5.0rc3
 
 # Preparation
 
+if [ "$EUID" -ne 0 ]
+  then echo "Please run this script as root using sudo"
+  exit
+fi
+
 apt-get update
 
 # Programming
@@ -25,7 +30,13 @@ gem install tmuxinator
 curl -L https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
+# git 
+
+git config --global user.name "Ross Gardler"
+git config --global user.email "ross@gardler.org"
+git config credential.helper "store" 
+
 # Cleanup
 
-cp -Rf . ~
+cp -Rf $SCRIPT_DIR ~
 
