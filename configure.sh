@@ -15,18 +15,17 @@ sudo apt-get install -y ruby
 sudo apt-get install -y python-pip
 sudo apt-get install -y lynx
 sudo apt-get install -y vi
-sudo apt-get install -y emacs
+sudo apt-get install -y emacs24-nox
 
 # Utilities
 
-gem install tmuxinator
+sudo gem install tmuxinator
 
 # Docker
 
 curl -L https://github.com/docker/compose/releases/download/$DOCKER_COMPOSE_VERSION/docker-compose-`uname -s`-`uname -m` > docker-compose
 sudo mv docker-compose /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-rm docker-compose
 
 # git 
 
