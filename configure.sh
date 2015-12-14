@@ -16,6 +16,7 @@ sudo apt-get install -y python-pip
 sudo apt-get install -y lynx
 sudo apt-get install -y vi
 sudo apt-get install -y emacs24-nox
+sudo apt-get install -y subversion
 
 # Utilities
 
