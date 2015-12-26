@@ -33,6 +33,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 git config --global user.name "Ross Gardler"
 git config --global user.email "ross@gardler.org"
 git config credential.helper "store" 
+git config --global push.default simple
 
 # Cleanup
 
